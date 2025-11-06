@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/256/12804/12804717.png">
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <nav class="navbar background">
+        <div class="logo">
+            <img src="https://i.pinimg.com/736x/fd/1d/cb/fd1dcbf4b7c37a7ac99db9c978cec252.jpg" style="height: 65px; width: 65px;" alt="Logo">
+        </div>
+        <ul class="nav-list">
+	    <li><a href="/">Login</li>
+            <li><a>Developed by: DaemonCibSec</a></li>
+        </ul>
+    </nav>
+    <canvas id="c"></canvas>
+    {% block content %}{% endblock %}
+    <script>
+    var c = document.getElementById("c");
+    var ctx = c.getContext("2d");
+
+    c.height = window.innerHeight;
+    c.width = window.innerWidth;
+
+    var matrix = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+    matrix = matrix.split("");
+
+    var font_size = 10;
+    var columns = c.width / font_size;
+    var drops = [];
+
+    for (var x = 0; x < columns; x++) drops[x] = 1;
+
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, c.width, c.height);
+
+      ctx.fillStyle = "#f4427d";
+      ctx.font = font_size + "px arial";
+
+      for (var i = 0; i < drops.length; i++) {
+        var text = matrix[Math.floor(Math.random() * matrix.length)];
+        ctx.fillText(text, i * font_size, drops[i] * font_size);
+
+        if (drops[i] * font_size > c.height && Math.random() > 0.975) drops[i] = 0;
+
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 35);
+
+    window.addEventListener('resize', () => {
+      c.width = window.innerWidth;
+      c.height = window.innerHeight;
+      columns = c.width / font_size;
+      drops = [];
+      for (var x = 0; x < columns; x++) drops[x] = 1;
+    });
+    </script>
+</body>
+</html>

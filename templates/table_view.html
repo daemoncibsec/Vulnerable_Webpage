@@ -1,0 +1,28 @@
+{% extends "base2.html" %}
+{% block title %}Table {{ table }}{% endblock %}
+{% block content %}
+    <div id="tables">
+        {% if table %}
+	    <table class="transparent-table" border="1" cellpadding="5">
+	        <thead>
+        	    <tr>
+                	{% for col in columns %}
+	                    <th>{{ col }}</th>
+        	        {% endfor %}
+	            </tr>
+        	</thead>
+	        <tbody>
+        	    {% for row in rows %}
+                	<tr>
+	                    {% for col in columns %}
+        	                <td>{{ row[col] }}</td>
+                	    {% endfor %}
+	                </tr>
+        	    {% endfor %}
+        	</tbody>
+	    </table>
+        {% else %}
+            <h3>No tables found.</h3>
+        {% endif %}
+    </div>
+{% endblock %}

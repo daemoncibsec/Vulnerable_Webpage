@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+    align-items: center;
+}
+canvas {display:block;}
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 100;
+    background-color: black;
+}
+
+.background {
+    background: black;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
+#no-post-found {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.nav-list {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 180px;
+    border-radius: 0px;
+}
+
+.nav-list li {
+    list-style: none;
+    padding: 26px 30px;
+    padding: 10px;
+}
+
+.nav-list li a {
+    font-family: 'Tektur', arial;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list li a:hover {
+    color: grey;
+}
+
+.rightnav {
+    width: 30%;
+    text-align: right;
+}
+
+#search {
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid grey;
+    border-radius: 9px;
+}
+
+.firstsection {
+    background-image: url('https://wallpapers.com/images/hd/world-map-cyber-security-ivcowv89j1g1ff4m.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.secondsection {
+    background-image: url('https://www.uclaextension.edu/sites/default/files/styles/course_hero/public/2017-10/python-programming-1-comscix418-104b_0.jpg?itok=9EIoRNXV');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.box-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f3f3f3;
+    max-width: 80%;
+    margin: auto;
+    height: 80%;
+    line-height: 28px;
+}
+
+.firsthalf {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondhalf {
+    width: 30%;
+}
+
+.secondhalf img {
+    width: 70%;
+    border: 4px solid white;
+    border-radius: 150px;
+    display: block;
+    margin: auto;
+}
+
+.text-big {
+    font-family: 'Inconsolata', arial;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 55px;
+}
+
+.text-medium {
+    font-family: 'Inconsolata', arial;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 55px;
+}
+
+.text-small {
+    font-family: 'Inconsolata', arial;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.text-small {
+    font-size: 18px;
+}
+
+.btn {
+    padding: 8px 20px;
+    margin: 7px 0;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-sm {
+    padding: 6px 10px;
+    vertical-align: middle;
+}
+
+.section {
+    background-image: url('https://techdefense.eu/images/header/evaluacion.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.section-Left {
+    flex-direction: row-reverse;
+}
+
+.paras {
+    padding: 0px 65px;
+    max-width: 80%;
+}
+
+.thumbnail img {
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 26px;
+    margin-top: 19px;
+}
+
+.center {
+    text-align: center;
+}
+
+.text-footer {
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+}
+
+
+.rightnav {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+}
+
+#search {
+    box-sizing: border-box;
+    width: 70%;
+    padding: 8px;
+    font-size: 17px;
+    border: 2px solid grey;
+    border-radius: 9px;
+}
+
+.btn-sm {
+    padding: 8px 20px;
+    margin: 7px 5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#social-media-message {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+#tables {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 50px;
+    z-index: 1;
+    overflow-x: auto
+}
+
+#social-links a img {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 10px #000);
+}
+
+#social-links a img:hover {
+    transform: scale(1.1);
+}
+
+.table-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+.transparent-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.3); /* semi-transparent */
+    color: white;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+}
+
+.transparent-table th, .transparent-table td {
+    font-family: 'Inconsolata', arial;
+    padding: 6px 15px;
+    border-bottom: 0px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.transparent-table th {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.transparent-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.table-content {
+  border: 1px solid #ccc;
+}
+
+.form-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 400px;
+}
+
+
+.form-input {
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #f4427d;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-family: 'Inconsolata', arial;
+}
+
+.form-input::placeholder {
+    color: #bbb;
+}
+
+p, h3, h4 {
+    font-family: 'Inconsolata', arial;
+    color: white;
+}
+
+#button {
+    margin-top: 30px;
+    font-family: 'Inconsolata', arial;
+    color: white;
+}

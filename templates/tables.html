@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Tables{% endblock %}
+{% block content %}
+    <div id="tables">
+        {% if tables %}
+            <table class="transparent-table" border="1" cellpadding="5">
+                <thead>
+                    <tr>
+                        <th>Schema</th>
+                        <th>Table Name</th>
+                        <th>Owner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for table in tables %}
+                        <tr>
+                            <td>{{ table.schema }}</td>
+			    <td>
+				    <a href="{{ url_for('view_table', schema=table.schema, table=table.name) }}">{{ table.name }}</a>
+			    </td>
+                            <td>{{ table.owner }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <h3>No tables found.</h3>
+        {% endif %}
+    </div>
+{% endblock %}
