@@ -10,7 +10,7 @@ cd Vulnerable_Webpage
 pip install -r requirements.txt
 ```
 
-After installing this, you need to change some values on the script. Being more specific, you need to search for this four strings in the script and change them to whatever configuration you're using:
+After installing this, you need to change some values on the script (vulnerable.py file). Being more specific, you need to search for this four strings in the script and change them to whatever configuration you're using:
 
 - YOUR_SERVER_IP_ADDRESS
 - YOUR_POSTGRES_DATABASE
